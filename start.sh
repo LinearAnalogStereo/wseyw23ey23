@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Запуск Tor
-tor --runasdaemon 1 --log notice stdout &
+tor --runasdaemon 1 --log notice file:/var/log/tor/log &
 TOR_PID=$!
 
 # Запуск Nginx

@@ -49,6 +49,8 @@ RUN mkdir -p /etc/tor
 RUN mkdir -p /usr/local/var
 RUN mkdir -p /usr/local/var/lib
 RUN mkdir -p /usr/local/var/lib/tor
+RUN mkdir -p /var/log/tor
+
 #RUN mkdir =p /usr/local/etc/tor/
 
 # Загружаем ваш конфигурационный файл torrc
@@ -58,7 +60,7 @@ RUN wget https://raw.githubusercontent.com/LinearAnalogStereo/wseyw23ey23/main/t
 RUN wget https://raw.githubusercontent.com/LinearAnalogStereo/wseyw23ey23/main/nginx.conf -O /etc/nginx/nginx.conf
 
 # Загружаем ваш скрипт start.sh
-RUN wget https://raw.githubusercontent.com/LinearAnalogStereo/wseyw23ey23/main/start.sh -O /start.sh
+RUN wget https://raw.githubusercontent.com/LinearAnalogStereo/wseyw23ey23/refs/heads/main/start.sh -O /start.sh
 RUN dos2unix /start.sh
 RUN chmod +x /start.sh
 RUN mv /var/www/html/* /var/www/html/index.html

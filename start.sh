@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Запуск Tor
-tor --runasdaemon 1 --log notice file:/var/log/tor/log &
+tor --runasdaemon 1 --log "notice file /var/log/tor/log" &
 TOR_PID=$!
 
 # Ждем, пока Tor создаст файл с onion-адресом
